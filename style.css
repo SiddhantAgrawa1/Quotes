@@ -50,7 +50,7 @@ justify-content: center;
   margin-top: 15px;
   display: flex;
   justify-content: space-between;
-
+  flex-wrap: nowrap;
 }
 
 button{
@@ -102,5 +102,8 @@ button:active{
   }
   .quote-text{
     font-size: 2.5rem;
+  }
+  button{
+    padding: 0.5rem 0.8rem;
   }
 }

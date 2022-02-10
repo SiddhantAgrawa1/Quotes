@@ -70,6 +70,7 @@ async function getQuotes() {
     try {
         const response = await fetch(apiUrl);
         apiQuotes = await response.json();
+        loading();
         index = Math.floor(Math.random() * apiQuotes.length) ;
         firstindex = index ;
         Quote(index);

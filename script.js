@@ -6,9 +6,6 @@ const prevQuoteBtn = document.getElementById('prev');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
 
-// Get Quotes from API
-let apiQuotes = [];
-
 // Maintaining Index
 let index = 0;
 
@@ -30,7 +27,7 @@ function complete() {
 //getting new quote
 function Quote(index) {
     loading();
-    const quote = apiQuotes[index];
+    const quote = Quotes[index];
 
     // Check if author field is blank and if then replace it with unknown
     if (!quote.author) {
@@ -65,13 +62,8 @@ function previous(){
 
 //get quote from api
 async function getQuotes() {
-    loading();
-    const apiUrl = 'https://type.fit/api/quotes'
     try {
-        const response = await fetch(apiUrl);
-        apiQuotes = await response.json();
-        loading();
-        index = Math.floor(Math.random() * apiQuotes.length) ;
+        index = Math.floor(Math.random() * Quotes.length) ;
         firstindex = index ;
         Quote(index);
     }

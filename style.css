@@ -102,6 +102,9 @@ button:active {
 }
 
 @media screen and (max-width: 1000px) {
+  .quote-container{
+    margin-top: -6rem;
+  }
   .quote-author {
     margin: auto 10px;
   }

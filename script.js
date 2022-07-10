@@ -63,7 +63,7 @@ function previous(){
 //get quote from api
 async function getQuotes() {
     try {
-        index = Math.floor(Math.random() * Quotes.length) ;
+        index = Math.floor(Math.random() * (Quotes.length-10)) ;
         firstindex = index ;
         Quote(index);
     }
